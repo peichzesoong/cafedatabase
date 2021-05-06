@@ -13,3 +13,5 @@ List of entity:
 - purchasingOrder
 - hq
 - supplier
+
+A group project done on HeidiSQL. 
