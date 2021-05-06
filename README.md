@@ -15,3 +15,5 @@ List of entity:
 - supplier
 
 A group project done on HeidiSQL. 
+
+queries.txt contains some of the SQL queries used.
