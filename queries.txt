@@ -1,0 +1,31 @@
+Queries used. 
+
+- Search and view staff 
+SELECT staffID, staffName, staffHours 
+FROM staff 
+WHERE staffHours > 8; 
+
+- Add new customer order 
+INSERT INTO custorder VALUES (1, 1, 1, 1, 2); 
+
+- Delete customer order when order wrong/cancelling order 
+DELETE FROM custorder 
+WHERE orderID = 3; 
+
+- Edit customer order when they order wrong 
+UPDATE custorder 
+SET foodID = 2 
+WHERE orderID = 1; 
+
+- Generate/show receipt for customer order 
+SELECT custorder.orderID, customer.custName, food.foodName, food.foodPrice, beverages.bevName, beverages.bevPrice, staff.staffName 
+FROM custorder 
+INNER JOIN customer 
+	ON custorder.custID = customer.custID 
+INNER JOIN food 
+	ON custorder.foodID = food.foodID
+INNER JOIN beverages 
+	ON custorder.bevID = beverages.bevID
+INNER JOIN staff 
+	ON custorder.staffID = staff.staffID 
+WHERE orderID = 1;
